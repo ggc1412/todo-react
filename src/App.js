@@ -1,9 +1,13 @@
 import React from 'react';
+import TodoListTemplate from './components/TodoListTemplate';
+import Form from './components/Form';
 
-function App() {
+const App = () => {
   return (
     <div>
-      todo app
+      <TodoListTemplate form={<Form/>}>
+        <div>children??</div>
+      </ TodoListTemplate>
     </div>
   );
 }
