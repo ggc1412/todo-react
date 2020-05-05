@@ -1,12 +1,13 @@
 import React from 'react';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
+import "./App.css";
 
 const App = () => {
   return (
     <div>
       <TodoListTemplate form={<Form/>}>
-        <div>children??</div>
+        todo list
       </ TodoListTemplate>
     </div>
   );
