@@ -1,12 +1,19 @@
 import React, { Component } from "react";
+import "./TodoItem.css";
 
 class TodoItem extends Component {
     render(){
-        const { input } = this.props.item;
+        const { text, checked } = this.props.item;
         console.log(this.props.item);
         return(
-            <div>
-                {input}
+            <div className="todo-item">
+                <div className="item-remove">
+                    ❌
+                </div>
+                <div className={`item-text ${ checked && "checked" }`}>
+                    {text}
+                </div>
+        { checked && <div className="item-check">✔</div> }
             </div>
         )
     }

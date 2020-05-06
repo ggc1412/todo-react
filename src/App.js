@@ -8,7 +8,21 @@ class App extends Component {
 
   state = {
     input:'',
-    todos:[]
+    todos:[{
+      id: 1,
+      text: "리액트 공부하기",
+      checked: false
+    },
+    {
+      id: 2,
+      text: "택배 보내기",
+      checked: true
+    },
+    {
+      id: 3,
+      text: "잘 자기",
+      checked: false
+    }]
   }
 
   onCreate = () => {
@@ -17,7 +31,7 @@ class App extends Component {
       input:'',
       todos: [{
         id:Date.now(),
-        input
+        text:input
       }, ...todos]
     })
   }

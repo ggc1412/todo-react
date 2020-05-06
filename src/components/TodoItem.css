@@ -1,0 +1,37 @@
+.todo-item {
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.todo-item + .todo-item {
+  border-top: 0.5px solid #c8d6e5;
+}
+
+.todo-item:hover {
+  background-color: #e4fbf5;
+}
+
+.todo-item:hover .item-remove {
+  opacity: 1;
+}
+
+.item-remove {
+  opacity: 0;
+  margin-right: 0.5rem;
+}
+
+.item-text {
+  flex: 1;
+  word-break: break-all; /* 비아시아 언어의 경우 의미 구분 없이 줄바꿈 */
+}
+
+.checked {
+  color: #c8d6e5;
+  text-decoration: line-through;
+}
+
+.item-check {
+  color: green;
+}
