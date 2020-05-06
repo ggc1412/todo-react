@@ -12,6 +12,7 @@
 - Init commmit :tada:
 - Add component :seedling:
 - styling :art:
+- state & props: :file_folder:
 - refactor code :hammer:
 - deploy :rocket:
 - error :construction:

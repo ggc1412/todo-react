@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
 import "./App.css";
+import TodoItemList from './components/TodoItemList';
 
 class App extends Component {
 
@@ -14,7 +15,10 @@ class App extends Component {
     const { input, todos } = this.state;
     this.setState({
       input:'',
-      todos: [input, ...todos]
+      todos: [{
+        id:Date.now(),
+        input
+      }, ...todos]
     })
   }
 
@@ -32,7 +36,7 @@ class App extends Component {
   }
 
   render(){
-    const { input } = this.state;
+    const { input, todos } = this.state;
     return (
       <div>
         <TodoListTemplate form={<Form
@@ -41,7 +45,7 @@ class App extends Component {
           onKeyPress={this.onKeyPress}
           onCreate={this.onCreate}
         />}>
-          todo list
+          <TodoItemList todos={todos}/>
         </ TodoListTemplate>
       </div>
     );
