@@ -8,9 +8,8 @@ class TodoItem extends Component {
         return item.checked !== nextProps.item.checked
     }
 
-
     render(){
-        const { item:{id, text, checked}, onToggle, onRemove } = this.props;
+        const { item:{id, text, checked, color}, onToggle, onRemove } = this.props;
         return(
             <div className="todo-item" onClick={()=>onToggle(id)}>
                 <div className="item-remove" onClick={
@@ -18,7 +17,7 @@ class TodoItem extends Component {
                     onRemove(id)}}>
                     <span role='img' aria-label='delete'>❌</span>
                 </div>
-                <div className={`item-text ${ checked && "checked" }`}>
+                <div className={`item-text ${ checked ? "checked" : color }`}>
                     {text}
                 </div>
         { checked && <div className="item-check">✔</div> }

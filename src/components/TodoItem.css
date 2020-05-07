@@ -23,6 +23,7 @@
 }
 
 .item-text {
+  font-weight: 600;
   flex: 1;
   word-break: break-all; /* 비아시아 언어의 경우 의미 구분 없이 줄바꿈 */
 }
@@ -34,4 +35,20 @@
 
 .item-check {
   color: green;
+}
+
+.black {
+  color: #2d3436;
+}
+
+.red {
+  color: #ee5253;
+}
+
+.green {
+  color: #10ac84;
+}
+
+.blue {
+  color: #2e86de;
 }

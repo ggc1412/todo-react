@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     input:'',
     colors:[
-      { id: 1, text: 'gray', selected: true }, 
+      { id: 1, text: 'black', selected: true }, 
       { id: 2, text: 'red', selected: false }, 
       { id: 3, text: 'green', selected: false }, 
       { id: 4, text: 'blue', selected: false } ],
@@ -18,30 +18,33 @@ class App extends Component {
       id: 1,
       text: "리액트 공부하기",
       checked: false,
-      color: 1
+      color: 'black'
     },
     {
       id: 2,
       text: "택배 보내기",
       checked: true,
-      color: 2
+      color: 'red'
     },
     {
       id: 3,
       text: "잘 자기",
       checked: false,
-      color: 3
+      color: 'green'
     }]
   }
 
   handleCreate = () => {
-    const { input, todos } = this.state;
+    const { input, todos, colors } = this.state;
+    const selectedColor = colors.find( color => color.selected === true )
+    console.log(selectedColor);
     this.setState({
       input:'',
       todos: [{
         id:Date.now(),
         text:input,
-        checked:false
+        checked:false,
+        color: selectedColor.text
       }, ...todos]
     })
   }

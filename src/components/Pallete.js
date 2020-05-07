@@ -4,7 +4,7 @@ import "./Pallete.css";
 
 const Color = ({onClick, color:{id, text, selected}}) => {
     return (
-        <div className={`color ${text} ${selected ? 'selected':''}`} onClick={() => onClick(id)} />
+        <div className={`color bg-${text} ${selected ? 'selected':''}`} onClick={() => onClick(id)} />
     )
 }
 
