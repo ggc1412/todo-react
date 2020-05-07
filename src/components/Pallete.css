@@ -1,0 +1,34 @@
+.color {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.color:hover {
+  opacity: 0.75;
+}
+
+.color + .color {
+  margin-left: 1rem;
+}
+
+.gray {
+  background-color: #576574;
+}
+
+.red {
+  background-color: #ee5253;
+}
+
+.green {
+  background-color: #10ac84;
+}
+
+.blue {
+  background-color: #2e86de;
+}
+
+.selected {
+  opacity: 1;
+}

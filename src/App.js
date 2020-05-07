@@ -3,25 +3,34 @@ import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
 import "./App.css";
 import TodoItemList from './components/TodoItemList';
+import Pallete from './components/Pallete';
 
 class App extends Component {
 
   state = {
     input:'',
+    colors:[
+      { id: 1, text: 'gray', selected: true }, 
+      { id: 2, text: 'red', selected: false }, 
+      { id: 3, text: 'green', selected: false }, 
+      { id: 4, text: 'blue', selected: false } ],
     todos:[{
       id: 1,
       text: "리액트 공부하기",
-      checked: false
+      checked: false,
+      color: 1
     },
     {
       id: 2,
       text: "택배 보내기",
-      checked: true
+      checked: true,
+      color: 2
     },
     {
       id: 3,
       text: "잘 자기",
-      checked: false
+      checked: false,
+      color: 3
     }]
   }
 
@@ -62,7 +71,6 @@ class App extends Component {
     this.setState({
       todos: nextTodos
     })
-
   }
 
   handleRemove = (id) => {
@@ -73,8 +81,23 @@ class App extends Component {
     })
   }
 
+  handleColor = (id) => {
+    const { colors } = this.state;
+    const nextColors = colors.map( color => {
+      if(color.id === id){
+        return { ...color, selected:true }
+      }
+        return { ...color, selected:false }
+    })
+
+    this.setState({
+      colors: nextColors
+    })
+
+  }
+
   render(){
-    const { input, todos } = this.state;
+    const { input, todos, colors } = this.state;
     return (
       <div>
         <TodoListTemplate form={<Form
@@ -82,7 +105,9 @@ class App extends Component {
           onChange={this.handleChange}
           onKeyPress={this.handleKeyPress}
           onCreate={this.handleCreate}
-        />}>
+        />}
+        color={<Pallete onColor={this.handleColor} colors={colors}/>}
+        >
           <TodoItemList 
             todos={todos} 
             onToggle={this.handleToggle} 
