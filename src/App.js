@@ -25,28 +25,48 @@ class App extends Component {
     }]
   }
 
-  onCreate = () => {
+  handleCreate = () => {
     const { input, todos } = this.state;
     this.setState({
       input:'',
       todos: [{
         id:Date.now(),
-        text:input
+        text:input,
+        checked:false
       }, ...todos]
     })
   }
 
-  onChange = (e) => {
+  handleChange = (e) => {
     const { value } = e.target;
     this.setState({
       input: value
     })
   }
 
-  onKeyPress = (e) => {
+  handleKeyPress = (e) => {
     if(e.key === "Enter"){
       this.onCreate();
     }
+  }
+
+  handleToggle = (id) => {
+    const { todos } = this.state;
+    const index = todos.findIndex( todo => todo.id === id );
+    const nextTodos = [...todos];
+    const prevProps = nextTodos[index];
+    nextTodos[index] ={
+      ...prevProps,
+      checked: !prevProps.checked
+    }
+    this.setState({
+      todos: nextTodos
+    })
+
+  }
+
+  handleRemove = () => {
+    
   }
 
   render(){
@@ -55,11 +75,14 @@ class App extends Component {
       <div>
         <TodoListTemplate form={<Form
           value={input}
-          onChange={this.onChange}
-          onKeyPress={this.onKeyPress}
-          onCreate={this.onCreate}
+          onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
+          onCreate={this.handleCreate}
         />}>
-          <TodoItemList todos={todos}/>
+          <TodoItemList 
+            todos={todos} 
+            onToggle={this.handleToggle} 
+            onRemove={this.handleRemove}/>
         </ TodoListTemplate>
       </div>
     );

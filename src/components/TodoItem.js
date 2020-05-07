@@ -3,10 +3,10 @@ import "./TodoItem.css";
 
 class TodoItem extends Component {
     render(){
-        const { text, checked } = this.props.item;
+        const { item:{id, text, checked}, onToggle } = this.props;
         console.log(this.props.item);
         return(
-            <div className="todo-item">
+            <div className="todo-item" onClick={()=>onToggle(id)}>
                 <div className="item-remove">
                     ❌
                 </div>
