@@ -46,7 +46,7 @@ class App extends Component {
 
   handleKeyPress = (e) => {
     if(e.key === "Enter"){
-      this.onCreate();
+      this.handleCreate();
     }
   }
 
@@ -65,8 +65,13 @@ class App extends Component {
 
   }
 
-  handleRemove = () => {
-    
+  handleRemove = (id) => {
+    const { todos }= this.state;
+    const nextTodos = todos.filter( todo => todo.id !== id );
+    console.log(nextTodos);
+    this.setState({
+      todos:nextTodos
+    })
   }
 
   render(){
