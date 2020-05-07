@@ -13,6 +13,7 @@
 - Add component :seedling:
 - styling :art:
 - state & props: :file_folder:
+- optimization: :airplane:
 - refactor code :hammer:
 - deploy :rocket:
 - error :construction:
