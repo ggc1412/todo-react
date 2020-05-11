@@ -1,10 +1,13 @@
 import React from "react";
+import classNames from "classnames/bind";
 import styles from "./Pallete.module.css";
+
+const cn = classNames.bind(styles);
 
 
 const Color = ({onClick, color:{id, text, selected}}) => {
     return (
-        <div className={`${styles.color} ${styles[text]} ${selected ? styles.selected :''}`} onClick={() => onClick(id)} />
+        <div className={cn('color', text, { selected })} onClick={() => onClick(id)} />
     )
 }
 
