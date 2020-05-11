@@ -1,14 +1,14 @@
 import React from "react";
-import "./Form.css";
+import styles from "./Form.module.css";
 
 const Form = ({value, onChange, onKeyPress, onCreate}) => {
     return (
-        <div className="form">
+        <div className={styles.form}>
             <input placeholder="할 일을 입력하세요." 
                 value={value} 
                 onChange={onChange} 
                 onKeyPress={onKeyPress} />
-            <div className="create-button" onClick={onCreate}>추가</div>
+            <div className={styles.createButton} onClick={onCreate}>추가</div>
         </div>
     );
 }

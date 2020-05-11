@@ -12,7 +12,7 @@
   color: #576574;
 }
 
-.create-button {
+.createButton {
   background: #1dd1a1;
   color: white;
   padding: 0.5rem 0.7rem;
@@ -21,6 +21,6 @@
   cursor: pointer;
 }
 
-.create-button:hover {
+.createButton:hover {
   background: #10ac84;
 }

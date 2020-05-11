@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./TodoItem.css";
+import styles from "./TodoItem.module.css";
 
 class TodoItem extends Component {
 
-    shouldComponentUpdate(nextProps, nextState){
+    shouldComponentUpdate(nextProps, _){
         const { item } = this.props;
         return item.checked !== nextProps.item.checked
     }
@@ -11,16 +11,16 @@ class TodoItem extends Component {
     render(){
         const { item:{id, text, checked, color}, onToggle, onRemove } = this.props;
         return(
-            <div className="todo-item" onClick={()=>onToggle(id)}>
-                <div className="item-remove" onClick={
+            <div className={styles.todoItem} onClick={()=>onToggle(id)}>
+                <div className={styles.itemRemove} onClick={
                     (e)=> { e.stopPropagation();
                     onRemove(id)}}>
                     <span role='img' aria-label='delete'>❌</span>
                 </div>
-                <div className={`item-text ${ checked ? "checked" : color }`}>
+                <div className={`${styles.itemText} ${ checked ? styles.checked : styles[color] }`}>
                     {text}
                 </div>
-        { checked && <div className="item-check">✔</div> }
+        { checked && <div className={styles.itemCheck}>✔</div> }
             </div>
         )
     }

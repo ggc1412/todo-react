@@ -1,19 +1,19 @@
 import React from "react";
-import "./TodoListTemplate.css";
+import styles from "./TodoListTemplate.module.css";
 
 const TodoListTemplate = ({form, color, children}) =>{
     return(
-        <main className="todo-list-template">
-            <section className="title">
+        <main className={styles.todoListTemplate}>
+            <section className={styles.title}>
                 오늘의 할 일               
             </section>
-            <section className="color-wrapper">
+            <section className={styles.colorWrapper}>
                 {color}
             </section>
-            <section className="form-wrapper">
+            <section className={styles.formWrapper}>
                 {form}
             </section>
-            <section className="todos-wrapper">
+            <section className={styles.todosWrapper}>
                 {children}
             </section>
         </main>

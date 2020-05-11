@@ -1,28 +1,28 @@
-.todo-item {
+.todoItem {
   padding: 1rem;
   font-size: 1rem;
   cursor: pointer;
   display: flex;
 }
 
-.todo-item + .todo-item {
+.todoItem + .todoItem {
   border-top: 0.5px solid #c8d6e5;
 }
 
-.todo-item:hover {
+.todoItem:hover {
   background-color: #e4fbf5;
 }
 
-.todo-item:hover .item-remove {
+.todoItem:hover .itemRemove {
   opacity: 1;
 }
 
-.item-remove {
+.itemRemove {
   opacity: 0;
   margin-right: 0.5rem;
 }
 
-.item-text {
+.itemText {
   font-weight: 600;
   flex: 1;
   word-break: break-all; /* 비아시아 언어의 경우 의미 구분 없이 줄바꿈 */
@@ -33,7 +33,7 @@
   text-decoration: line-through;
 }
 
-.item-check {
+.itemCheck {
   color: green;
 }
 
