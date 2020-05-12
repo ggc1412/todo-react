@@ -1,0 +1,27 @@
+$btnColor: #1dd1a1;
+
+.form {
+  display: flex;
+  input {
+    flex: 1;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $btnColor;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #576574;
+  }
+}
+
+.createButton {
+  background: $btnColor;
+  color: white;
+  padding: 0.5rem 0.7rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($btnColor, 10%);
+  }
+}

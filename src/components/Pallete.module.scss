@@ -1,0 +1,39 @@
+$red: #ee5253;
+$black: #2d3436;
+$green: #10ac84;
+$blue: #2e86de;
+
+.color {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  & + & {
+    margin-left: 1rem;
+  }
+}
+
+.black {
+  background-color: $black;
+}
+
+.red {
+  background-color: $red;
+}
+
+.green {
+  background-color: $green;
+}
+
+.blue {
+  background-color: $blue;
+}
+
+.selected {
+  opacity: 1;
+}

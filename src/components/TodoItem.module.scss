@@ -3,18 +3,17 @@
   font-size: 1rem;
   cursor: pointer;
   display: flex;
-}
 
-.todoItem + .todoItem {
-  border-top: 0.5px solid #c8d6e5;
-}
+  & + & {
+    border-top: 0.5px solid #c8d6e5;
+  }
 
-.todoItem:hover {
-  background-color: #e4fbf5;
-}
-
-.todoItem:hover .itemRemove {
-  opacity: 1;
+  &:hover {
+    background-color: #e4fbf5;
+    .itemRemove {
+      opacity: 1;
+    }
+  }
 }
 
 .itemRemove {
