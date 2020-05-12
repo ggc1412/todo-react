@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames/bind";
-import styles from "./TodoListTemplate.module.scss";
+import styles from "../styles/TodoListTemplate.module.scss";
 
 const cn = classNames.bind(styles);
 

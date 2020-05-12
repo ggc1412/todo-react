@@ -1,3 +1,5 @@
+@import "./utils.scss";
+
 .todoItem {
   padding: 1rem;
   font-size: 1rem;
@@ -5,11 +7,11 @@
   display: flex;
 
   & + & {
-    border-top: 0.5px solid #c8d6e5;
+    border-top: 0.5px solid $itemGray;
   }
 
   &:hover {
-    background-color: #e4fbf5;
+    background-color: $itemBgColor;
     .itemRemove {
       opacity: 1;
     }
@@ -28,7 +30,7 @@
 }
 
 .checked {
-  color: #c8d6e5;
+  color: $itemGray;
   text-decoration: line-through;
 }
 
@@ -37,17 +39,17 @@
 }
 
 .black {
-  color: #2d3436;
+  color: $black;
 }
 
 .red {
-  color: #ee5253;
+  color: $red;
 }
 
 .green {
-  color: #10ac84;
+  color: $green;
 }
 
 .blue {
-  color: #2e86de;
+  color: $blue;
 }

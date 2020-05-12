@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Form.module.scss";
+import styles from "../styles/Form.module.scss";
 
 const Form = ({value, onChange, onKeyPress, onCreate}) => {
     return (

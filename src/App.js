@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
-import "./App.module.scss";
+import "./styles/App.module.scss";
 import TodoItemList from './components/TodoItemList';
 import Pallete from './components/Pallete';
 

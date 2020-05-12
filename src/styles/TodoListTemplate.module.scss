@@ -1,3 +1,5 @@
+@import "./utils.scss";
+
 .todoListTemplate {
   background: white;
   width: 512px;
@@ -9,14 +11,14 @@
 .title {
   text-align: center;
   padding: 1.5rem;
-  background: #1dd1a1;
+  background: $formGreen;
   font-size: 2rem;
   font-weight: 600;
   color: white;
 }
 
 .colorWrapper {
-  background-color: #ecf0f1;
+  background-color: darken($bgColor, 5%);
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -24,7 +26,7 @@
 
 .formWrapper {
   padding: 1rem;
-  border-bottom: 1px solid #10ac84;
+  border-bottom: 1px solid darken($formGreen, 5%);
 }
 
 .todosWrapper {

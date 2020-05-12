@@ -1,4 +1,4 @@
-$btnColor: #1dd1a1;
+@import "./utils.scss";
 
 .form {
   display: flex;
@@ -6,15 +6,15 @@ $btnColor: #1dd1a1;
     flex: 1;
     outline: none;
     border: none;
-    border-bottom: 1px solid $btnColor;
+    border-bottom: 1px solid $formGreen;
     font-size: 1rem;
     font-weight: 400;
-    color: #576574;
+    color: $inputFont;
   }
 }
 
 .createButton {
-  background: $btnColor;
+  background: $formGreen;
   color: white;
   padding: 0.5rem 0.7rem;
   margin-left: 1rem;
@@ -22,6 +22,6 @@ $btnColor: #1dd1a1;
   cursor: pointer;
 
   &:hover {
-    background: darken($btnColor, 10%);
+    background: darken($formGreen, 10%);
   }
 }

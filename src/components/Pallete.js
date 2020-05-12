@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames/bind";
-import styles from "./Pallete.module.scss";
+import styles from "../styles/Pallete.module.scss";
 
 const cn = classNames.bind(styles);
 
