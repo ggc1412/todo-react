@@ -6,7 +6,7 @@
     flex: 1;
     outline: none;
     border: none;
-    border-bottom: 1px solid $formGreen;
+    border-bottom: 1px solid $formColor;
     font-size: 1rem;
     font-weight: 400;
     color: $inputFont;
@@ -14,7 +14,7 @@
 }
 
 .createButton {
-  background: $formGreen;
+  background: $formColor;
   color: white;
   padding: 0.5rem 0.7rem;
   margin-left: 1rem;
@@ -22,6 +22,6 @@
   cursor: pointer;
 
   &:hover {
-    background: darken($formGreen, 10%);
+    background: darken($formColor, 10%);
   }
 }

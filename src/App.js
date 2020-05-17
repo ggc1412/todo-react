@@ -6,7 +6,6 @@ import TodoItemList from './components/TodoItemList';
 import Pallete from './components/Pallete';
 
 class App extends Component {
-
   state = {
     input:'',
     colors:[

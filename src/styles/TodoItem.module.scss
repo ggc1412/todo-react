@@ -7,7 +7,7 @@
   display: flex;
 
   & + & {
-    border-top: 0.5px solid $itemGray;
+    border-top: 0.5px solid $gray;
   }
 
   &:hover {
@@ -30,12 +30,12 @@
 }
 
 .checked {
-  color: $itemGray;
+  color: $gray;
   text-decoration: line-through;
 }
 
 .itemCheck {
-  color: green;
+  color: $checkColor;
 }
 
 .black {

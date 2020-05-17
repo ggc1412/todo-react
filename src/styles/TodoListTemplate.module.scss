@@ -11,14 +11,14 @@
 .title {
   text-align: center;
   padding: 1.5rem;
-  background: $formGreen;
+  background: $formColor;
   font-size: 2rem;
   font-weight: 600;
   color: white;
 }
 
 .colorWrapper {
-  background-color: darken($bgColor, 5%);
+  background-color: darken($bgColor, 2%);
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@
 
 .formWrapper {
   padding: 1rem;
-  border-bottom: 1px solid darken($formGreen, 5%);
+  border-bottom: 1px solid darken($formColor, 5%);
 }
 
 .todosWrapper {
