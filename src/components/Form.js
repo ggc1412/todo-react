@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "../styles/Form.module.scss";
 
-const Form = ({value, onChange, onKeyPress, onCreate}) => {
+const Form = ({value, onChange, onCreate}) => {
+
+    const onKeyPress = (e) => {
+        if(e.key === "Enter") {
+            onCreate();
+        }
+    }
+
     return (
         <div className={styles.form}>
             <input placeholder="할 일을 입력하세요." 
