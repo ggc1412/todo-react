@@ -7,8 +7,8 @@ const mapStateProps = (state) => ({
 });
 
 const mapDispatchProps = (dispatch) => ({
-    onChange: () => dispatch(actions.change),
-    onCreate: (e) => dispatch(actions.create(e))
+    onChange: (e) => dispatch(actions.change(e)),
+    onCreate: () => dispatch(actions.create())
 });
 
 

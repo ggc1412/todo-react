@@ -63,7 +63,6 @@ export default handleActions(
       const selectedColor = colors.find(
         (color) => color.get("selected") === true
       );
-
       return state.set("input", "").set(
         "todos",
         todos.unshift(
